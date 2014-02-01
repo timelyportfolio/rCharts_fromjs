@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>rCharts with from.js</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script src="./js/ace.js"></script>
+    <script src="./js/from.src.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id = "editor-data" class ="col-md-6" style="height:300px;">
+        </div><!--col-md-->
+        <div id = "editor-fromjs" class ="col-md-6" style="height: 300px;">
+        </div><!--col-md-->
+      </div><!--row-->
+      <div class="row">
+      
+      </div><!--row-->
+    </div><!--container-->
+
+    <script>
+      var editor_data = ace.edit("editor-data");
+      editor_data.setTheme("ace/theme/twilight");
+      editor_data.getSession().setMode("ace/mode/javascript");
+
+      var editor_fromjs = ace.edit("editor-fromjs");
+      editor_fromjs.setTheme("ace/theme/twilight");
+      editor_fromjs.getSession().setMode("ace/mode/javascript");
+    </script>
+  </body>
+</html>
