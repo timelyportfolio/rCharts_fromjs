@@ -14,9 +14,11 @@
   <body>
     <div class="container">
       <div class="row">
-        <div id = "editor-data" class ="col-md-6" style="height:300px;">
+        <div id = "editor-data" class ="col-md-4" style="height:300px;">
         </div><!--col-md-->
-        <div id = "editor-fromjs" class ="col-md-6" style="height: 300px;">
+        <div id = "editor-fromjs" class ="col-md-4" style="height: 300px;">
+        </div><!--col-md-->
+        <div id = "editor-result" class ="col-md-4" style="height: 300px;">
         </div><!--col-md-->
       </div><!--row-->
       <div class="row">
@@ -32,6 +34,11 @@
       var editor_fromjs = ace.edit("editor-fromjs");
       editor_fromjs.setTheme("ace/theme/twilight");
       editor_fromjs.getSession().setMode("ace/mode/javascript");
+
+      var editor_result = ace.edit("editor-result");
+      editor_result.setTheme("ace/theme/twilight");
+      editor_result.getSession().setMode("ace/mode/javascript");
+      editor_result.setReadOnly(true);
     </script>
   </body>
 </html>
